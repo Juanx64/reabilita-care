@@ -24,7 +24,7 @@
           <div class="coluna-esquerda">
             <div class="wrapper">
               <header>
-                <p class="current-date"></p>
+                <h2 class="current-date"></h2>
                 <div class="icons">
                   <span id="prev" class="material-symbols-rounded">&lt;</span>
                   <span id="next" class="material-symbols-rounded">&gt;</span>
@@ -32,19 +32,19 @@
               </header>
               <div class="calendar">
                 <ul class="weeks">
-                  <li>Sun</li>
-                  <li>Mon</li>
-                  <li>Tue</li>
-                  <li>Wed</li>
-                  <li>Thu</li>
-                  <li>Fri</li>
-                  <li>Sat</li>
+                  <li><strong>Sun</strong></li>
+                  <li><strong>Mon</strong></li>
+                  <li><strong>Tue</strong></li>
+                  <li><strong>Wed</strong></li>
+                  <li><strong>Thu</strong></li>
+                  <li><strong>Fri</strong></li>
+                  <li><strong>Sat</strong></li>
                 </ul>
                 <ul class="days"></ul>
               </div>
             </div>
             <div class="especialidade">
-          <p>Especialidade</p>
+          <h2>Especialidade</p>
               <optgroup>
                 <label><input type="checkbox" value="">Clínica Geral</option></label>
                 <label><input type="checkbox" value="">Psicologia</option></label>
@@ -55,13 +55,18 @@
           </div>
           <aside>
             <div class="medico">
-              <div class="quadrado"></div>
+              <div class="quadrado">
+                <img src="images/ricardo-foto.jpg" alt="">
+              </div>
               <div class="textos">
                 <div class="ricardo-alinhado">
-                  <p>Dr. Ricardo Mendes</p>
-                  <p>4.9 (124 avaliações)</p>
+                  <h2>Dr. Ricardo Mendes</h2>
+                  <div class="avaliacoes">
+                    <img src="icons/estrela.png" alt="">
+                    <p>4.9 (124 avaliações)</p>
+                  </div>
                 </div>
-                <p>Fisioterapia Ortopédica</p>
+                <h3>Fisioterapia Ortopédica</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, veritatis dicta cum voluptate quasi officiis debitis?</p>
                 <div>
                   <div class="horarios">
@@ -75,13 +80,18 @@
               </div>
             </div>
             <div class="medico">
-              <div class="quadrado"></div>
+              <div class="quadrado">
+                <img src="images/camila-foto.jpg" alt="">
+              </div>
               <div class="textos">
                 <div class="ricardo-alinhado">
-                  <p>Dra.Camila Santos</p>
-                  <p>5.0 (89 avaliações)</p>
+                  <h2>Dra.Camila Santos</h2>
+                  <div class="avaliacoes">
+                    <img src="icons/estrela.png" alt="">
+                    <p>5.0 (89 avaliações)</p>
+                  </div>
                 </div>
-                <p>Osteopatia & Bem-estar</p>
+                <h3>Osteopatia & Bem-estar</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, veritatis dicta cum voluptate quasi officiis debitis?</p>
                 <div>
                   <div class="horarios">
@@ -99,7 +109,7 @@
               <h2>Confirme sua Escolha</h2>
               <div class="linha-modal">
                 <div class="campo">
-                  <label>Tipo de Consulta</label>
+                  <label><h3>Tipo de Consulta</h3></label>
                   <select>
                     <option>Avaliação Inicial</option>
                     <option>Retorno</option>
@@ -107,16 +117,16 @@
                   </select>
                 </div>
                 <div class="campo">
-                  <label>Paciente</label>
+                  <label><h3>Paciente</h3></label>
                   <input type="text" value="João Almeida">
                 </div>
               </div>
               <div class="campo">
-                <label>Observações Médicas</label>
+                <label><h3>Observações Médicas</h3></label>
                 <textarea placeholder="Descreva brevemente o motivo do agendamento..."></textarea>
               </div>
               <div class="rodape-modal">
-                <button class="botao-finalizar">Finalizar Agendamento</button>
+                <button class="botao-finalizar"><p>Finalizar Agendamento</p></button>
               </div>
             </div>
           </div>
