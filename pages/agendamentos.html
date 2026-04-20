@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reabilita Care</title>
-  <link rel="stylesheet" href="/styles/agendamentos.css">
+  <link rel="stylesheet" href="../assets/styles/agendamentos.css">
 </head>
 <body>
     <nav>
@@ -26,8 +26,8 @@
               <header>
                 <h2 class="current-date"></h2>
                 <div class="icons">
-                  <span id="prev" class="material-symbols-rounded">&lt;</span>
-                  <span id="next" class="material-symbols-rounded">&gt;</span>
+                  <span id="prev" class="material-symbols-rounded"><img src="../assets/icons/arrow-point-to-left.png" alt=""></span>
+                  <span id="next" class="material-symbols-rounded"><img src="../assets/icons/arrow-point-to-right.png" alt=""></span>
                 </div>
               </header>
               <div class="calendar">
@@ -44,7 +44,7 @@
               </div>
             </div>
             <div class="especialidade">
-          <h2>Especialidade</p>
+          <h2>Especialidade</h2>
               <optgroup>
                 <label><input type="checkbox" value="">Clínica Geral</option></label>
                 <label><input type="checkbox" value="">Psicologia</option></label>
@@ -56,13 +56,13 @@
           <aside>
             <div class="medico">
               <div class="quadrado">
-                <img src="images/ricardo-foto.jpg" alt="">
+                <img src="../assets/images/ricardo-foto.jpg" alt="">
               </div>
               <div class="textos">
                 <div class="ricardo-alinhado">
                   <h2>Dr. Ricardo Mendes</h2>
                   <div class="avaliacoes">
-                    <img src="icons/estrela.png" alt="">
+                    <img src="../assets/icons/estrela.png" alt="">
                     <p>4.9 (124 avaliações)</p>
                   </div>
                 </div>
@@ -81,13 +81,13 @@
             </div>
             <div class="medico">
               <div class="quadrado">
-                <img src="images/camila-foto.jpg" alt="">
+                <img src="../assets/images/camila-foto.jpg" alt="">
               </div>
               <div class="textos">
                 <div class="ricardo-alinhado">
                   <h2>Dra. Camila Santos</h2>
                   <div class="avaliacoes">
-                    <img src="icons/estrela.png" alt="">
+                    <img src="../assets/icons/estrela.png" alt="">
                     <p>5.0 (89 avaliações)</p>
                   </div>
                 </div>
@@ -110,7 +110,7 @@
               <div class="linha-modal">
                 <div class="campo">
                   <label><h3>Tipo de Consulta</h3></label>
-                  <select>
+                  <select title="tipos">
                     <option>Avaliação Inicial</option>
                     <option>Retorno</option>
                     <option>Consulta Urgente</option>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="campo">
                   <label><h3>Paciente</h3></label>
-                  <input type="text" value="João Almeida">
+                  <input type="text" value="João Almeida" title="paciente">
                 </div>
               </div>
               <div class="campo">
@@ -132,12 +132,8 @@
           </div>
           </aside>
         </div>
-        
-        
       </section>
-      
-
     </main>
 
-<script src="/scripts/agendamentos.js"></script>
+<script src="../assets/scripts/agendamentos.js"></script>
 </body>
