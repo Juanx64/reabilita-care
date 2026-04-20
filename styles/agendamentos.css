@@ -16,6 +16,9 @@
   margin: 0;
 }
 
+option, span {
+  cursor: pointer;
+}
 h1, h2, h3, li {
   font-family: "Manrope";
 }
@@ -137,7 +140,7 @@ header .current-date {
 
 .especialidade {
   margin-top: 40px;
-  background-color: var(--azul-claro);
+  background-color: var(--surface);
   border: 0.5px solid var(--azul-borda);
   padding: 20px;
   border-radius: 10px;
@@ -292,7 +295,7 @@ aside {
   border: 1px solid #dde3f0;
   border-radius: 8px;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Inter";
 }
 
@@ -309,7 +312,7 @@ aside {
 }
 
 .botao-finalizar {
-  background: var(--azul-primario);
+  background: linear-gradient(to right, var(--azul-primario) 0%, var(--azul-medio) 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -317,10 +320,6 @@ aside {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-}
-
-.botao-finalizar:hover {
-  background: var(--azul-medio);
 }
 
 .days li.active::before {
@@ -350,3 +349,4 @@ aside {
   margin: 0px;
   font-weight: 500;
 }
+
