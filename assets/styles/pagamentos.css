@@ -14,7 +14,7 @@
         }
 
 body {
-        background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/1887516-luz-azul-verde-fundo-com-nuvens-vetor.jpg);
+    background-image: url("../images/imagemfundo.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -24,6 +24,15 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 110px;
+    transition: 0.4s;
+    animation: fadeIn 1.2s ease;
 }
 
 .payment-container {

@@ -1,1 +1,101 @@
-Coloque a página inicial do Projeto Aqui
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/styles/index.css" />
+
+    <title>ReabilitaCare</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- TOPO -->
+      <section class="top-header">
+        <div class="interface">
+          <!-- LOGO -->
+          <div class="logotipo">
+            <a href="index.html">
+              <img src="../assets/images/logosemfundo.png" alt="Logo" />
+            </a>
+          </div>
+
+          <!-- DIREITA (SOCIAL + USUÁRIO) -->
+          <div style="display: flex; align-items: center; gap: 15px">
+            <!-- REDES SOCIAIS -->
+            <div class="btn-social">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </div>
+
+            <!-- USUÁRIO -->
+            <div class="area-usuario">
+              <a href="login.html" id="btnLogin">Entrar</a>
+
+              <div id="usuarioLogado" class="usuario-logado">
+                <span id="nomeUsuario"></span>
+                <button onclick="logout()">Sair</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU -->
+      <section class="bottom-header">
+        <div class="interface">
+          <nav>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+
+              <li class="drop-hover">
+                <a href="#">Serviços <i class="bi bi-caret-down-fill"></i></a>
+                <div class="drop">
+                  <a href="reabilitacao.html">Reabilitação</a>
+                  <a href="fisioterapia.html">Fisioterapia</a>
+                </div>
+              </li>
+
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
+    <!-- SCRIPT NO FINAL (CORRETO) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const usuario = localStorage.getItem("usuario");
+
+        const btnLogin = document.getElementById("btnLogin");
+        const usuarioLogado = document.getElementById("usuarioLogado");
+        const nomeUsuario = document.getElementById("nomeUsuario");
+
+        if (usuario) {
+          btnLogin.style.display = "none";
+          usuarioLogado.style.display = "flex";
+          nomeUsuario.innerText = "Olá, " + usuario;
+        } else {
+          usuarioLogado.style.display = "none";
+        }
+      });
+
+      /* LOGOUT */
+      function logout() {
+        localStorage.removeItem("usuario");
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

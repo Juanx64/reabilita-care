@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONTAINER */
+.interface {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* HEADER FIXO */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  animation: slideDown 0.8s ease;
+}
+
+/* TOPO (LOGO + REDES) */
+.top-header {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 5px 0;
+}
+
+.top-header .interface {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logotipo img {
+  width: 180px;
+  transition: 0.3s;
+}
+
+.logotipo img:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* REDES SOCIAIS */
+.btn-social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-social a:hover {
+  background: #00bfff;
+  color: #fff;
+  border-color: #00bfff;
+  transform: translateY(-3px);
+}
+
+/* MENU */
+.bottom-header {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* LISTA */
+.bottom-header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* ITENS */
+.bottom-header nav ul li {
+  position: relative;
+}
+
+/* LINKS */
+.bottom-header nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.bottom-header nav ul li a:hover {
+  background: #00bfff;
+  transform: translateY(-3px);
+}
+
+/* DROPDOWN */
+.drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.drop a {
+  padding: 10px;
+  color: white;
+}
+
+.drop a:hover {
+  background: #00bfff;
+}
+
+/* MOSTRAR DROPDOWN */
+.drop-hover:hover .drop {
+  display: flex;
+}
+
+/* FUNDO */
+body {
+  min-height: 100vh;
+  background: url(imagemfundo.jpeg) no-repeat center center;
+  background-size: cover;
+  padding-top: 110px;
+}
+
+/* ANIMAÇÃO */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.area-usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.area-usuario a {
+  padding: 6px 12px;
+  background: #00bfff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.area-usuario a:hover {
+  background: #009acd;
+}
+
+#usuarioLogado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+
+#usuarioLogado button {
+  padding: 5px 10px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

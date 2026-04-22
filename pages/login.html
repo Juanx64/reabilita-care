@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/styles/login.css"/>
+  </head>
+<body>
+
+    <!-- Logo -->
+    <a href="index.html" class="imagem-canto">
+        <img src="../assets/images/logosemfundo.png" alt="logo">
+    </a> 
+
+    <!-- Login -->
+    <form class="Login">
+        <h2>Login</h2>
+
+        <div class="import-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Digite seu email">
+        </div>
+
+        <div class="import-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+
+        <div class="import-group linha">
+            <label class="checkbox-label">
+                <input type="checkbox"> Lembrar-me
+            </label>
+            <a href="#" class="link">Esqueci minha senha</a>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <div class="register">
+            <p>Não tem uma conta? <a href="#">Registrar-se</a></p>
+        </div>
+    </form>
+<script>
+const form = document.querySelector(".Login");
+const email = document.getElementById("email");
+const senha = document.getElementById("password");
+const botao = document.querySelector("button");
+
+/* VALIDAR */
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let valido = true;
+
+  if(email.value === ""){
+    email.classList.add("input-erro");
+    valido = false;
+  } else {
+    email.classList.remove("input-erro");
+    email.classList.add("input-sucesso");
+  }
+
+  if(senha.value === ""){
+    senha.classList.add("input-erro");
+    valido = false;
+  } else {
+    senha.classList.remove("input-erro");
+    senha.classList.add("input-sucesso");
+  }
+
+  if(valido){
+    botao.classList.add("loading");
+
+    setTimeout(() => {
+      alert("Login realizado!");
+      botao.classList.remove("loading");
+    }, 2000);
+  }
+});
+
+/* MOSTRAR SENHA */
+senha.addEventListener("dblclick", () => {
+  senha.type = senha.type === "password" ? "text" : "password";
+});
+</script>
+</body>
+</html>
