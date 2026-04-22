@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fale Conosco</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url("../assets/images/imagemfundo.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .box {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 30px;
+        width: 500px; /* Um pouco mais largo para a mensagem */
+        color: black;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+      }
+      fieldset {
+        border: 3px solid rgb(103, 170, 201);
+        border-radius: 20px;
+        padding: 25px;
+      }
+      legend {
+        border: 1px solid rgb(111, 175, 240);
+        padding: 10px 20px;
+        text-align: center;
+        background-color: rgb(111, 175, 240);
+        color: white;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+      .inputBox {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .inputUser {
+        background: none;
+        border: none;
+        border-bottom: 2px solid rgb(103, 170, 201);
+        outline: none;
+        color: black;
+        font-size: 16px;
+        width: 100%;
+        letter-spacing: 1px;
+        padding: 10px 0 5px 0;
+      }
+      /* Estilo específico para a área de mensagem */
+      textarea.inputUser {
+        height: 80px;
+        resize: none; /* Impede o usuário de bagunçar o layout */
+        font-family: inherit;
+      }
+      .labelInput {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        pointer-events: none;
+        transition: 0.3s;
+        color: gray;
+      }
+      .inputUser:focus ~ .labelInput,
+      .inputUser:valid ~ .labelInput {
+        top: -15px;
+        font-size: 12px;
+        color: rgb(0, 80, 172);
+        font-weight: bold;
+      }
+      #submit {
+        background-image: linear-gradient(
+          to right,
+          rgb(0, 80, 172),
+          rgb(103, 170, 201)
+        );
+        width: 100%;
+        border: none;
+        padding: 15px;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      #submit:hover {
+        background-image: linear-gradient(
+          to right,
+          rgb(0, 50, 120),
+          rgb(80, 150, 180)
+        );
+        transform: scale(1.02);
+      }
+      p {
+        text-align: center;
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Logo -->
+    <a href="index.html" class="imagem-canto">
+      <img src="../assets/images/logosemfundo.png" alt="logo" />
+    </a>
+    <div class="box">
+      <form action="">
+        <fieldset>
+          <legend>FALE CONOSCO</legend>
+          <p>Dúvidas, sugestões ou elogios? Envie sua mensagem!</p>
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              class="inputUser"
+              required
+            />
+            <label for="nome" class="labelInput">Seu Nome</label>
+          </div>
+
+          <div class="inputBox">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="inputUser"
+              required
+            />
+            <label for="email" class="labelInput">Seu E-mail</label>
+          </div>
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="assunto"
+              id="assunto"
+              class="inputUser"
+              required
+            />
+            <label for="assunto" class="labelInput">Assunto</label>
+          </div>
+
+          <div class="inputBox">
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              class="inputUser"
+              required
+            ></textarea>
+            <label for="mensagem" class="labelInput">Sua Mensagem</label>
+          </div>
+
+          <input
+            type="submit"
+            name="submit"
+            id="submit"
+            value="Enviar Mensagem"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
